@@ -1,83 +1,273 @@
-body {
+/* ========== GLOBAL ========= */
+:root {
+    --primary: #0b3c5d;
+    --secondary: #1d70a2;
+    --accent: #4ea5d9;
+    --bg: #f5f7fb;
+    --text-dark: #1f2933;
+    --text-light: #6b7280;
+    --max-width: 1100px;
+}
+
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f6f8fa;
-    color: #333;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--bg);
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+/* ========== CONTAINER ========= */
 .container {
-    width: 80%;
+    max-width: var(--max-width);
     margin: auto;
-    padding: 20px 0;
+    padding: 3.5rem 1.5rem;
 }
 
+/* ========== HEADER ========= */
 header {
-    background: #1b1f23;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: white;
-    padding: 40px 0;
+    padding: 4rem 1.5rem;
 }
 
 .header-content {
+    max-width: var(--max-width);
+    margin: auto;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 2rem;
 }
 
 .profile-img {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
+    border: 4px solid rgba(255,255,255,0.4);
     object-fit: cover;
 }
 
-nav {
-    background: #24292e;
-    padding: 10px 0;
+header h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.95;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav a {
-    color: #e1e4e8;
+header a {
+    color: #e6f2ff;
     text-decoration: none;
-    font-weight: bold;
 }
 
-nav a:hover {
-    color: white;
+header a:hover {
     text-decoration: underline;
 }
 
-h1, h2 {
-    margin-bottom: 10px;
+/* ========== NAVBAR ========= */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 1000;
 }
 
-.pub-item, .project {
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--accent);
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* ========== SECTIONS ========= */
+section h2 {
+    font-size: 1.9rem;
+    margin-bottom: 1.4rem;
+    color: var(--primary);
+}
+
+section p {
+    max-width: 800px;
+    color: var(--text-light);
+}
+
+/* ========== RESEARCH ========= */
+.research-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.research-list li {
     background: white;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    padding: 1rem 1.2rem;
+    margin-bottom: 0.8rem;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+}
+
+/* ========== PUBLICATIONS ========= */
+.pub-item {
+    background: white;
+    padding: 1.6rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.pub-item h3 {
+    color: var(--primary);
+    margin-bottom: 0.6rem;
 }
 
 .pub-link {
-    color: #0366d6;
+    display: inline-block;
+    margin-top: 0.7rem;
+    color: var(--secondary);
+    font-weight: 500;
+    text-decoration: none;
 }
 
+.pub-link:hover {
+    text-decoration: underline;
+}
+
+/* ========== PROJECTS ========= */
+.project {
+    background: white;
+    padding: 1.6rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-4px);
+}
+
+.project h3 {
+    color: var(--primary);
+    margin-bottom: 0.6rem;
+}
+
+/* ========== CONTACT ========= */
+#contact a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* ========== FOOTER ========= */
 footer {
-    background: #1b1f23;
+    background: var(--primary);
     color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
+    padding: 1.4rem;
+    font-size: 0.9rem;
 }
+
+/* ========== RESPONSIVE ========= */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
+/* Container for About section */
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centers child paragraphs horizontally */
+}
+
+/* Base paragraph style */
+.about-paragraph {
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 80%;            /* controls the width of each paragraph box */
+    max-width: 800px;      /* optional: limit maximum width */
+    text-align: left;      /* keep text readable */
+}
+
+/* Hover effect */
+.about-paragraph:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Paragraph specific colors */
+.paragraph-1 {
+    background: #e6f2ff; /* soft blue */
+    color: #0b3c5d;      /* dark blue text */
+    border-left: 4px solid #1d70a2;
+}
+
+.paragraph-2 {
+    background: #fff4e6; /* soft orange */
+    color: #a64c00;      /* dark orange text */
+    border-left: 4px solid #ff7f11;
+}
+
+.paragraph-3 {
+    background: #e6fff7; /* soft green */
+    color: #00664d;      /* dark green text */
+    border-left: 4px solid #00b37e;
+}
+
+/* Section heading */
+#about h2 {
+    font-size: 2rem;
+    color: #0b3c5d;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+

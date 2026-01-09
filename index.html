@@ -1,99 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Félix Olémou – Academic CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header>
-    <div class="container header-content">
-        <img src="profile.jpg" alt="Profile Photo" class="profile-img">
-        <div>
-            <h1>Félix Olémou</h1>
-            <p>Researcher | Computer Vision & Machine Learning</p>
-            <p><a href="mailto:your-email@example.com">your-email@example.com</a></p>
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="header-content">
+            <img src="profile.jpg" alt="Profile Photo" class="profile-img">
+            <div>
+                <h1>Félix Olémou</h1>
+                <p class="subtitle">Researcher | Robotic Vision, Machine Learning, Multimodal, Edge AI</p>
+                <p>
+                    <a href="mailto:felix.olemou@treloxai.com">felix.olemou@treloxai.com</a>
+                </p>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<nav>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<section id="about" class="container">
-    <h2>About Me</h2>
-    <p>
-        I am a graduate researcher specializing in Computer Vision, Robotics, and Machine Learning.
-        My interests include efficient Vision Transformers, multimodal perception on edge devices,
-        and real-time embedded AI.
-    </p>
-</section>
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="containe-about">
+        <h2>About Me</h2>
 
-<section id="research" class="container">
-    <h2>Research Interests</h2>
-    <ul>
-        <li>Efficient Vision Transformers (mobile, edge, low-rank, sparse)</li>
-        <li>Computer Vision for Robotics (perception, multisensor fusion)</li>
-        <li>Embedded AI (Raspberry Pi, Jetson, micro-edge)</li>
-        <li>Multimodal models (RGB-T, audio-vision)</li>
-    </ul>
-</section>
-
-<section id="publications" class="container">
-    <h2>Publications</h2>
-
-    <div class="pub-item">
-        <h3>Title of Paper</h3>
-        <p><strong>Authors:</strong> Your Name, Coauthors</p>
-        <p><strong>Venue:</strong> IEEE TIM, 2024</p>
-        <a href="#" class="pub-link">PDF</a>
-    </div>
-
-    <div class="pub-item">
-        <h3>Another Research Paper</h3>
-        <p><strong>Authors:</strong> Your Name, Coauthors</p>
-        <p><strong>Venue:</strong> CVPR Workshop, 2023</p>
-        <a href="#" class="pub-link">PDF</a>
-    </div>
-</section>
-
-<section id="projects" class="container">
-    <h2>Projects</h2>
-
-    <div class="project">
-        <h3>Real-Time Vision Transformer on Raspberry Pi</h3>
-        <p>
-            Designed an optimized 4 GFLOP hybrid CNN-ViT model achieving near real-time performance
-            for small-object detection on edge devices.
+        <p class="about-paragraph paragraph-1">
+            I am a graduate student researcher specializing in <strong>Computer Vision, Robotics, and Machine
+                Learning</strong>,
+            with a strong focus on <strong>Physical AI systems</strong> that operate reliably in real-world
+            environments.
+            My research centers on <strong>efficient vision and vision-language models (VLMs)</strong> for edge and
+            embedded
+            platforms, <strong>multimodal perception</strong>, and <strong>real-time robotic intelligence</strong> under
+            computational and environmental constraints.
         </p>
-    </div>
 
-    <div class="project">
-        <h3>Multimodal RGB-Thermal Vision Model</h3>
-        <p>
-            Built a lightweight RGB-T ViT for nighttime and low-light perception in robotics.
+        <p class="about-paragraph paragraph-2">
+            I currently hold a <strong>Research Assistant</strong> position at the <strong>University of
+                Moncton</strong>,
+            where I apply <strong>human pose estimation</strong> and <strong>graph convolutional neural networks
+                (GCNs)</strong>
+            to detect atypical movement patterns indicative of autism. This approach enables robust modeling of
+            spatiotemporal
+            relationships in skeletal motion data, supporting early diagnosis and personalized intervention strategies.
+            In parallel, I serve as a <strong>corrector and tutor in Advanced Algorithms</strong>, reinforcing my strong
+            foundations in <strong>algorithmic design, optimization, and computational efficiency</strong>,
+            which are critical for deploying AI in physical and embedded systems.
         </p>
-    </div>
-</section>
 
-<section id="contact" class="container">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/your-username">github.com/your-username</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/your-profile">linkedin.com/in/your-profile</a></p>
-</section>
 
-<footer>
-    <p>© 2025 Félix Olémou</p>
-</footer>
+        <p class="about-paragraph paragraph-3">
+            In parallel, I am a <strong>co-founder of TreloxAI</strong>, a startup focused on transforming
+            <strong>hard-to-see physical hazards</strong>, such as liquid spills, into
+            <strong>financial-grade risk signals</strong> that insurers, safety teams, and decision-makers can clearly
+            interpret.
+            TreloxAI also develops <strong>edge-based robotic perception, navigation, and planning solutions</strong>,
+            enabling robots to operate safely in <strong>challenging and underrepresented edge cases</strong> that are
+            often
+            overlooked by conventional vision-based systems, including navigation and planning under hazardous
+            conditions.
+         <a href="https://www.treloxai.net" class="pub-link">Learn more about Treloxai</a>
+          </p>
+    </section>
+
+
+    <!-- ================= RESEARCH ================= -->
+    <section id="research" class="container">
+        <h2>Research Interests</h2>
+        <ul class="research-list">
+            <li>
+                <strong>Efficient Vision Transformers (mobile, sparse, low-rank):</strong>
+                Designing lightweight and optimized Vision Transformer architectures
+                that achieve high performance on edge and mobile devices while minimizing
+                computational and memory overhead.
+            </li>
+            <li>
+                <strong>Computer Vision for Robotics & Autonomous Systems:</strong>
+                Developing perception pipelines and algorithms to enable robots to
+                accurately detect, track, and interpret objects and environments
+                for autonomous navigation and manipulation.
+            </li>
+            <li>
+                <strong>Edge AI (Jetson, Raspberry Pi, micro-edge):</strong>
+                Implementing AI models on embedded hardware platforms for
+                real-time processing, low-latency decision-making, and
+                energy-efficient computation in physical systems.
+            </li>
+            <li>
+                <strong>Multimodal Perception (RGB-D, Thermal):</strong>
+                Fusing depth-enhanced RGB (RGB-D) and thermal sensor data to improve
+                perception accuracy, object detection, and scene understanding in
+                challenging environments and edge cases for robotic and physical AI systems.
+            </li>
+
+        </ul>
+    </section>
+
+
+    <!-- ================= PUBLICATIONS ================= -->
+    <section id="publications" class="container">
+        <div class="pub-item">
+            <h3>
+                ViCo-LWIR: Vision-Based Detection of Indoor Liquid Spills Using
+                Long-Wave Infrared Imaging and a Weakly Supervised Contrastive Framework
+            </h3>
+            <p><strong>Authors:</strong> Félix Olémou, Co-authors</p>
+            <p><strong>Venue:</strong> IEEE TIM, 2025 (under review)</p>
+            <p>
+                <strong>Why:</strong> Indoor liquid spills are irregular and unpredictable, making
+                traditional vision-based detection systems unreliable. This work leverages
+                weakly supervised contrastive learning on long-wave infrared (LWIR) data to
+                reduce the need for dense annotations while creating a generalizable framework
+                that succeeds in scenarios where current systems fail.
+                <strong>Importance for robotics:</strong> By enabling robots to reliably detect and navigate
+                around hazardous spills, this framework improves autonomous safety and
+                decision-making in real-world indoor environments, supporting Physical AI
+                systems that must operate safely under uncertain conditions.
+            </p>
+            <a href="https://drive.google.com/file/d/1n1PWURCi0AniymTkhyVbjZZlY_de8INF/view?usp=sharing" class="pub-link">PDF</a>
+        </div>
+
+
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>SpatialCL: Contrastive Learning for Spatially Structured Modalities</h3>
+            <p>
+                <strong>SpatialCL</strong> is a plug-and-play contrastive learning framework designed for
+                <strong>spatially structured modalities</strong>, including RGB, thermal, and RGB-D data.
+                It robustly handles <strong>intra- and inter-class variability</strong>, enabling
+                consistent embeddings across challenging datasets and improving perception for
+                robotic and Physical AI applications.
+            </p>
+            <a href="https://github.com/Olemou/SpatialCL" class="project-link">Learn More</a>
+        </div>
+
+
+        <div class="project">
+            <h3>SHViT + SPARO: Memory-Efficient and Compositional Vision Transformers</h3>
+            <p>
+                Efficient Vision Transformers like <strong>SHViT</strong> reduce memory costs using single-head
+                attention and coarse patch embeddings,
+                but struggle with fine-grained detail, small-object detection, and capturing diverse visual patterns.
+                Integrating <strong>SPARO</strong> as a selective attention module preserves SHViT’s efficiency while
+                enhancing robustness,
+                compositional representation, and interpretability, enabling richer and more generalizable visual
+                encodings.
+            </p>
+            <a href="https://github.com/Olemou/SHVIT-enhancement" class="ect-link">Learn More</a>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:efo6780@umoncton.ca">efo6780@umoncton.ca</a></p>
+        <p>LinkedIn: <a
+                href="https://www.linkedin.com/in/felix-olemou-6367a0230/">https://www.linkedin.com/in/felix-olemou-6367a0230/</a>
+        </p>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>© 2026 Félix Olémou</p>
+    </footer>
 
 </body>
+
 </html>
